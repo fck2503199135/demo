@@ -131,8 +131,8 @@ public class ExcelUtil {
      */
     private static ExcelReader getReader(MultipartFile excel,
                                          ExcelListener excelListener) {
-        String filename = excel.getOriginalFilename();
-        if (filename == null || (!filename.toLowerCase().endsWith(".xls") && !filename.toLowerCase().endsWith(".xlsx"))) {
+        String fileName = excel.getOriginalFilename();
+        if (fileName == null || (!fileName.toLowerCase().endsWith(".xls") && !fileName.toLowerCase().endsWith(".xlsx"))) {
             throw new ExcelException("文件格式错误！");
         }
         InputStream inputStream;

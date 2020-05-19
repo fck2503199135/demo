@@ -35,12 +35,12 @@ public class ExcelListener extends AnalysisEventListener {
         //根据业务自行 do something
         doSomething();
         //如数据过大,可以进行定量分批处理
-        if (datas.size() <= 100) {
+/*        if (datas.size() <= 100) {
             datas.add(object);
         } else {
             doSomething();
             datas = new ArrayList<Object>();
-        }
+        }*/
     }
 
     @Override
