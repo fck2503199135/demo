@@ -20,7 +20,7 @@ import java.util.List;
 @Api(tags = "Excel导入")
 @Slf4j
 @RestController
-public class ExcelImport {
+public class ExcelImportController {
 
     @Resource
     ExcelService excelService;
