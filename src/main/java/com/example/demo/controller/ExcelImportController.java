@@ -1,8 +1,6 @@
 package com.example.demo.controller;
 
-import com.alibaba.fastjson.JSONObject;
 import com.example.demo.pojo.ProductMode;
-import com.example.demo.pojo.RespBean;
 import com.example.demo.service.ExcelService;
 import com.example.demo.utils.ExcelUtil;
 import io.swagger.annotations.Api;
