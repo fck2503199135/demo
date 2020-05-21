@@ -10,12 +10,11 @@ import java.util.Set;
  */
 @Data
 @ToString
-public class UserPojo {
+public class RolePojo {
     private String id;
-    private String userName;
-    private String password;
+    private String roleName;
     /**
-     * 用户对应的角色集合
+     * 角色对应权限集合
      */
-    private Set<RolePojo> roles;
+    private Set<PermissionsPojo> permissions;
 }
