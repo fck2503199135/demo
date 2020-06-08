@@ -4,5 +4,8 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.example.demo.mapper.UserMapper">
     <select id="getUserByName" resultType="com.example.demo.pojo.UserPojo">
+        select *
+        from demo_user
+        where user_name = #{name}
     </select>
 </mapper>
