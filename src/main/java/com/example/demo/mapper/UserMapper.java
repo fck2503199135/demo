@@ -3,6 +3,8 @@ package com.example.demo.mapper;
 import com.example.demo.pojo.UserPojo;
 import org.apache.ibatis.annotations.Param;
 
+import java.util.List;
+
 /**
  * 用户
  *
@@ -17,4 +19,7 @@ public interface UserMapper {
      * @return
      */
     UserPojo getUserByName(@Param("name") String name);
+
+
+    List<UserPojo> getUserInfo(Integer storeId);
 }

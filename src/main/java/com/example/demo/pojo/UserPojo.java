@@ -14,6 +14,7 @@ public class UserPojo {
     private String id;
     private String userName;
     private String password;
+    private Integer storeId;
     /**
      * 用户对应的角色集合
      */

@@ -7,6 +7,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
+import java.util.List;
 
 /**
  * 用户
@@ -22,5 +23,10 @@ public class UserServiceImpl implements UserService {
     @Override
     public UserPojo getUserByName(String name) {
         return userMapper.getUserByName(name);
+    }
+
+    @Override
+    public List<UserPojo> getUserInfo(Integer storeId) {
+        return userMapper.getUserInfo(storeId);
     }
 }
