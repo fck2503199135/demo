@@ -113,6 +113,13 @@
             <artifactId>pagehelper-spring-boot-starter</artifactId>
             <version>1.2.10</version>
         </dependency>
+
+        <!-- https://mvnrepository.com/artifact/gui.ava/html2image -->
+        <dependency>
+            <groupId>gui.ava</groupId>
+            <artifactId>html2image</artifactId>
+            <version>2.0.1</version>
+        </dependency>
         
         <dependency>
             <groupId>org.apache.shiro</groupId>
