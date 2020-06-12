@@ -29,4 +29,9 @@ public class UserServiceImpl implements UserService {
     public List<UserPojo> getUserInfo(Integer storeId) {
         return userMapper.getUserInfo(storeId);
     }
+
+    @Override
+    public int login(String userName, String password) {
+        return 0;
+    }
 }
