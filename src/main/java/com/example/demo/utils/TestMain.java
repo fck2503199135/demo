@@ -11,6 +11,7 @@ import javax.imageio.ImageIO;
 import javax.swing.*;
 import javax.swing.border.EmptyBorder;
 import java.awt.*;
+import java.awt.geom.AffineTransform;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
@@ -132,7 +133,7 @@ public class TestMain extends JPanel {
     }
 
     public static void main(String[] args) {
-        /*final String url = "<html><head></head><body><div style=\"position:relative;left:0;top:0;width:212px;height:110px\"><div style=\"position: absolute;left:0px;top:0px;width:212px;height:110px;z-index:1\"><div style=\"position:relative;width:212px;height:110px\"><div style=\"position:absolute;white-space:nowrap;overflow:hidden;color:rgba(255,0,0,1);location:center;background-color:rgba(255,255,255,0);width:212px;top:0px;left:0px;z-index:2;font-size:32px;font-family:Microsoft Yahei;letter-spacing:0px;\">碳烧咖啡22</div><div style=\"position:absolute;word-wrap:nowrap;word-break:break-all;overflow:hidden;color:rgba(0,0,0,1);location:center;background-color:rgba(255,255,255,0);width:50px;top:46px;left:69px;z-index:2;font-size:15px;font-family:SimSun;letter-spacing:0px;\">罐装1</div><div style=\"position:absolute;word-wrap:nowrap;word-break:break-all;overflow:hidden;color:rgba(0,0,0,1);location:center;background-color:rgba(255,255,255,0);width:50px;top:46px;left:114px;z-index:2;font-size:15px;font-family:SimSun;letter-spacing:0px;\">罐装1</div><div style=\"position:absolute;display: flex;justify-content: center;align-items: center;width:50px;height:50px;top:56px;left:0px;z-index:2;background-color:rgba(255,255,255,0);image-type:100;\"><img style=\"max-width:100%;max-height:100%\" src=\"http://10.6.3.81:8090/ishelf/imgs/upload/product/null/2020/6/11/1528444040.png\"></img></div><div style=\"position:absolute;word-wrap:nowrap;word-break:break-all;overflow:hidden;color:rgba(0,0,0,1);location:center;background-color:rgba(255,255,255,0);width:50px;top:69px;left:69px;z-index:2;font-size:15px;font-family:SimSun;letter-spacing:0px;\">好喝11</div></div></div><br/></div></body></html>";
+ /*       final String url = "<html><head></head><body><div style=\"position:relative;left:0;top:0;width:212px;height:110px\"><div style=\"position: absolute;left:0px;top:0px;width:212px;height:110px;z-index:1\"><div style=\"position:relative;width:212px;height:110px\"><div style=\"position:absolute;white-space:nowrap;overflow:hidden;color:rgba(255,0,0,1);location:center;background-color:rgba(255,255,255,0);width:212px;top:0px;left:0px;z-index:2;font-size:32px;font-family:Microsoft Yahei;letter-spacing:0px;\">碳烧咖啡22</div><div style=\"position:absolute;word-wrap:nowrap;word-break:break-all;overflow:hidden;color:rgba(0,0,0,1);location:center;background-color:rgba(255,255,255,0);width:50px;top:46px;left:69px;z-index:2;font-size:15px;font-family:SimSun;letter-spacing:0px;\">罐装1</div><div style=\"position:absolute;word-wrap:nowrap;word-break:break-all;overflow:hidden;color:rgba(0,0,0,1);location:center;background-color:rgba(255,255,255,0);width:50px;top:46px;left:114px;z-index:2;font-size:15px;font-family:SimSun;letter-spacing:0px;\">罐装1</div><div style=\"position:absolute;display: flex;justify-content: center;align-items: center;width:50px;height:50px;top:56px;left:0px;z-index:2;background-color:rgba(255,255,255,0);image-type:100;\"><img style=\"max-width:100%;max-height:100%\" src=\"http://10.6.3.81:8090/ishelf/imgs/upload/product/null/2020/6/11/1528444040.png\"></img></div><div style=\"position:absolute;word-wrap:nowrap;word-break:break-all;overflow:hidden;color:rgba(0,0,0,1);location:center;background-color:rgba(255,255,255,0);width:50px;top:69px;left:69px;z-index:2;font-size:15px;font-family:SimSun;letter-spacing:0px;\">好喝11</div></div></div><br/></div></body></html>";
         final String title = "DJ Test";
         UIUtils.setPreferredLookAndFeel();
         NativeInterface.open();
@@ -150,13 +151,14 @@ public class TestMain extends JPanel {
         });
         NativeInterface.runEventPump();*/
 
+
         NativeInterface.open();
         SwingUtilities.invokeLater(() -> {
             // SWT组件转Swing组件，不初始化父窗体将无法启动webBrowser
             JFrame frame = new JFrame("以DJ组件保存指定网页截图");
             // 加载指定页面，最大保存为640x480的截图
             frame.getContentPane().add(
-                    new TestMain("http://116.62.200.160:8090/iknow/login", 1920, 1080),
+                    new TestMain("http://10.6.3.239:8090/ishelf/imgs/index.html", 1920, 1080),
                     BorderLayout.CENTER);
             frame.setSize(1920, 1080);
             // 仅初始化，但不显示
@@ -165,6 +167,8 @@ public class TestMain extends JPanel {
             frame.setVisible(false);
         });
         NativeInterface.runEventPump();
+
+
     }
 
 /*    public TestMain(final String html) {
@@ -178,6 +182,6 @@ public class TestMain extends JPanel {
         webBrowser.setStatusBarVisible(false);
         webBrowserPanel.add(webBrowser, BorderLayout.CENTER);
         add(webBrowserPanel, BorderLayout.CENTER);
-    }*/
 
+    }*/
 }
